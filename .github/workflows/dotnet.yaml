@@ -26,8 +26,3 @@ jobs:
 
     - name: Test
       run: dotnet test MySolution/MySolution.sln --no-build --verbosity normal
-
-
-# git add .github/workflows/dotnet.yml
-# git commit -m "feat(devops): add github actions workflow for CI"
-# git push origin main
