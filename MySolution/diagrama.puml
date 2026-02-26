@@ -1,0 +1,26 @@
+@startuml diagram
+namespace Backend {
+    class Date {
+        -- Fields --
+        - _year : int
+        - _month : int
+        - _day : int
+
+        -- Constructors --
+        + Date()
+        + Date(year : int, month : int, day : int)
+
+        -- Properties --
+        + Year : int <<get/set>>
+        + Month : int <<get/set>>
+        + Day : int <<get/set>>
+
+        -- Methods --
+        + ToString() : string
+        - ValidateYear(year : int) : int
+        - ValidateMonth(month : int) : int
+        - ValidateDay(day : int) : int
+        - IsLeapYear(year : int) : bool
+    }
+}
+@enduml
