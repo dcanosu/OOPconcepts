@@ -19,10 +19,11 @@ jobs:
         dotnet-version: 10.0.103
 
     - name: Restore dependencies
-      run: dotnet restore MySolution/MySolution.sln
+      run: dotnet restore MySolution/MySolution.slnx
 
     - name: Build
-      run: dotnet build MySolution/MySolution.sln --no-restore --configuration Release
+      run: dotnet build MySolution/MySolution.slnx --no-restore --configuration Release
 
     - name: Test
-      run: dotnet test MySolution/MySolution.sln --no-build --verbosity normal
+      run: dotnet test MySolution/MySolution.slnx --no-build --verbosity normal
+    #   run: dotnet test **/*.sln --no-build --verbosity normal (We also can use this wildcard **/*.sln to find all solution files)
